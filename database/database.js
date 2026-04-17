@@ -1,5 +1,4 @@
-const { default: mongoose } = require("mongoose");
-
+import mongoose from "mongoose"
 mongoose.connect()
 const connection = mongoose.connection
 connection.once("open", () => {
