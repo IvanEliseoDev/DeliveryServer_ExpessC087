@@ -1,8 +1,13 @@
 import { app } from "./app/App.js"
 
 const main = async() => {
-    app.listen(4000)
-    console.log("Server Run in Port: 4000")
+   try {
+        app.listen(4000, () => {
+            console.log("Server running on port 4000");
+        });
+    } catch (error) {
+        console.error("Database connection failed:", error);
+    }
 }
 
 main()
